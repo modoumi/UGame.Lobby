@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<NoWarn>1701;1702;1591</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<NoWarn>1701;1702;1591</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Lobby.Flow" Version="1.0.123" />
+		<PackageReference Include="MediatR" Version="12.1.1" />
+		<PackageReference Include="UGame.Banks.Client" Version="1.2.60" />
+		<PackageReference Include="UGame.User.Common" Version="1.4.172" />
+		<PackageReference Include="UGame.Bridge.Client" Version="1.1.107" />
+		<PackageReference Include="UGame.SMS" Version="1.4.125" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\UGame.Lobby.Common\UGame.Lobby.Common.csproj" />
+		<ProjectReference Include="..\UGame.Lobby.Repository\UGame.Lobby.Repository.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Services\Activity\PayReward\" />
+	</ItemGroup>
+
+</Project>
